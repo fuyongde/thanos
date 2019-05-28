@@ -1,0 +1,11 @@
+server:
+  port: 8082
+spring:
+  cloud:
+    gateway:
+      default-filters:
+      routes:
+        - id: path_route
+          uri: http://localhost:8080/products
+          predicates:
+            - Path=/products

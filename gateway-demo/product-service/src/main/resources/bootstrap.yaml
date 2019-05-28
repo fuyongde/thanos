@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: product-service
+  main:
+    allow-bean-definition-overriding: true
