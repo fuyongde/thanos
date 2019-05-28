@@ -9,8 +9,7 @@ import java.io.Serializable;
  * @date 2019/5/28
  */
 @Data
-public class ProductRequest implements Serializable {
-    private String name;
-    private Long price;
-    private Integer stock;
+public class ProductRevokeRequest implements Serializable {
+    private Integer id;
+    private Integer status;
 }

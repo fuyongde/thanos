@@ -8,4 +8,4 @@ spring:
         - id: path_route
           uri: http://localhost:8080/products
           predicates:
-            - Path=/products
+            - Path=/products,/products/*

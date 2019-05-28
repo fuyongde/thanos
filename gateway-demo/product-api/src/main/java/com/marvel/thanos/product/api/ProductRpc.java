@@ -1,6 +1,8 @@
 package com.marvel.thanos.product.api;
 
-import com.marvel.thanos.product.api.request.ProductRequest;
+import com.marvel.thanos.product.api.request.ProductCreateRequest;
+import com.marvel.thanos.product.api.request.ProductRevokeRequest;
+import com.marvel.thanos.product.api.request.ProductUpdateRequest;
 
 /**
  * @author fuyongde
@@ -8,6 +10,13 @@ import com.marvel.thanos.product.api.request.ProductRequest;
  */
 public interface ProductRpc {
 
-    String create(ProductRequest request);
+    String list();
 
+    String create(ProductCreateRequest request);
+
+    String update(Integer id, ProductUpdateRequest request);
+
+    String revoke(Integer id, ProductRevokeRequest request);
+
+    String delete(Integer id);
 }
