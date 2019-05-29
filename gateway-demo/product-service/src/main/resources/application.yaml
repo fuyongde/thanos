@@ -10,6 +10,8 @@ dubbo:
 #    address: spring-cloud://localhost
 #   The traditional Dubbo's registry
     address: zookeeper://192.168.0.133:2181
+  application:
+    logger: slf4j
 
 server:
   port: 8080
