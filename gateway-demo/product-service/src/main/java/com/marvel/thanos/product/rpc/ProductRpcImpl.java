@@ -31,14 +31,14 @@ public class ProductRpcImpl implements ProductRpc {
         return "SUCCESS";
     }
 
-    @PutMapping(value = "/products/{id}", params = "update")
+    @PutMapping(value = "/products/{id}", params = "op=update")
     @Override
     public String update(@PathVariable Integer id, @RequestBody ProductUpdateRequest request) {
         log.info("PUT product 4 update : id : {}, request {}", id, request);
         return "UPDATE SUCCESS";
     }
 
-    @PutMapping(value = "/products/{id}", params = "revoke")
+    @PutMapping(value = "/products/{id}", params = "op=revoke")
     @Override
     public String revoke(@PathVariable Integer id, @RequestBody ProductRevokeRequest request) {
         log.info("PUT product 4 revoke, id : {}, request : {}", id, request);

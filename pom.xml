@@ -32,8 +32,10 @@
         <spring-boot.version>2.1.5.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <spring-cloud-alibaba.version>0.9.0.RELEASE</spring-cloud-alibaba.version>
+        <zkclient.version>0.2</zkclient.version>
 
         <lombok.version>1.18.8</lombok.version>
+        <dubbo.version>2.7.1</dubbo.version>
 
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
     </properties>

@@ -1,0 +1,58 @@
+GET http://localhost:8082/orders
+
+###
+
+POST http://localhost:8082/orders
+Content-Type: application/json
+
+{"name":"product name", "price": 10000, "stock": 20}
+
+###
+
+PUT http://localhost:8082/orders/1?update=update
+Content-Type: application/json
+
+{"id":1, "name":"product name", "price": 10000, "stock": 20}
+
+###
+
+PUT http://localhost:8082/orders/1?revoke=revoke
+Content-Type: application/json
+
+{"id":1, "status": 1}
+
+###
+
+DELETE http://localhost:8082/orders/1
+
+###
+
+
+GET http://localhost:8082/products
+
+###
+
+POST http://localhost:8082/products
+Content-Type: application/json
+
+{"name":"product name", "price": 10000, "stock": 20}
+
+###
+
+PUT http://localhost:8082/products/1?op=update
+Content-Type: application/json
+
+{"id":1, "name":"product name", "price": 10000, "stock": 20}
+
+###
+
+PUT http://localhost:8082/products/1?op=revoke
+Content-Type: application/json
+
+{"id":1, "status": 1}
+
+###
+
+DELETE http://localhost:8082/products/1
+
+###

@@ -1,4 +1,4 @@
-package com.marvel.thanos.product.api.request;
+package com.marvel.thanos.order.api.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,8 +13,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductUpdateRequest implements Serializable {
-    private Integer id;
+public class OrderCreateRequest implements Serializable {
     private String name;
     private Long price;
     private Integer stock;

@@ -1,6 +1,6 @@
 dubbo:
   scan:
-    base-packages: com.marvel.thanos.product.rpc
+    base-packages: com.marvel.thanos.order.rpc
   protocols:
     dubbo:
       name: dubbo
@@ -9,10 +9,10 @@ dubbo:
 #   The Spring Cloud Dubbo's registry extension
 #    address: spring-cloud://localhost
 #   The traditional Dubbo's registry
-    address: zookeeper://192.168.0.133:2181
+   address: zookeeper://192.168.0.133:2181
 
 server:
-  port: 8080
+  port: 8081
 
 
 management:

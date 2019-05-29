@@ -5,7 +5,11 @@ spring:
     gateway:
       default-filters:
       routes:
-        - id: path_route
+        - id: product_route
           uri: http://localhost:8080/products
           predicates:
             - Path=/products,/products/*
+        - id: order_route
+          uri: http://localhost:8081/orders
+          predicates:
+            - Path=/orders,/orders/*
