@@ -17,6 +17,7 @@
         <module>order-api</module>
         <module>order-service</module>
         <module>gateway</module>
+        <module>gateway2</module>
     </modules>
 
 </project>

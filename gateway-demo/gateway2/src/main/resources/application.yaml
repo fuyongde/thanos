@@ -1,0 +1,12 @@
+dubbo:
+  registry:
+    #   The Spring Cloud Dubbo's registry extension
+    address: spring-cloud://localhost
+    #   The traditional Dubbo's registry
+    # address: zookeeper://192.168.0.133:2181
+
+server:
+  port: 8083
+
+logging:
+  config: classpath:logback.xml

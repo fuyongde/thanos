@@ -7,15 +7,18 @@ dubbo:
       port: -1
   registry:
 #   The Spring Cloud Dubbo's registry extension
-#    address: spring-cloud://localhost
+    address: spring-cloud://localhost
 #   The traditional Dubbo's registry
-    address: zookeeper://192.168.0.133:2181
+#    address: zookeeper://192.168.0.133:2181
   application:
     logger: slf4j
 
+feign:
+  hystrix:
+    enabled: true
+
 server:
   port: 8080
-
 
 management:
   endpoints:
