@@ -59,6 +59,12 @@
         </dependency>
 
         <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-jaxrs2</artifactId>
+            <version>10.1.0</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.marvel.thanos</groupId>
             <artifactId>product-api</artifactId>
             <version>${project.version}</version>
