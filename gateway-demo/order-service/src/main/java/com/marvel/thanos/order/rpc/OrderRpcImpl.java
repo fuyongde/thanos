@@ -37,7 +37,7 @@ public class OrderRpcImpl implements OrderRpc {
     @Override
     public String create(@RequestBody OrderCreateRequest request) {
         productRpc.create(new ProductCreateRequest("product name", 10000L, 20));
-        log.info("POST products : {}", request);
+        log.info("POST orders : {}", request);
         return "SUCCESS";
     }
 
@@ -45,7 +45,7 @@ public class OrderRpcImpl implements OrderRpc {
     @Override
     public String update(@PathVariable Integer id, @RequestBody OrderUpdateRequest request) {
         productRpc.update(id, new ProductUpdateRequest(id, "product name", 10000L, 20));
-        log.info("PUT product 4 update : id : {}, request {}", id, request);
+        log.info("PUT order 4 update : id : {}, request {}", id, request);
         return "UPDATE SUCCESS";
     }
 

@@ -12,6 +12,7 @@ dubbo:
 #    address: zookeeper://192.168.0.133:2181
   application:
     logger: slf4j
+    qos-port: 22222
 
 feign:
   hystrix:

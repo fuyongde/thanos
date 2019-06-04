@@ -1,58 +1,51 @@
+### HTTP协议访问Gateway，Gateway以Http协议访问order-service，order-service以rpc协议访问product-service
 GET http://localhost:8082/orders
 
-###
-
+### HTTP协议访问Gateway，Gateway以Http协议访问order-service，order-service以rpc协议访问product-service
 POST http://localhost:8082/orders
 Content-Type: application/json
 
 {"name":"product name", "price": 10000, "stock": 20}
 
-###
-
-PUT http://localhost:8082/orders/1?update=update
+### HTTP协议访问Gateway，Gateway以Http协议访问order-service，order-service以rpc协议访问product-service
+PUT http://localhost:8082/orders/1?op=update
 Content-Type: application/json
 
 {"id":1, "name":"product name", "price": 10000, "stock": 20}
 
-###
-
-PUT http://localhost:8082/orders/1?revoke=revoke
+### HTTP协议访问Gateway，Gateway以Http协议访问order-service，order-service以rpc协议访问product-service
+PUT http://localhost:8082/orders/1?op=revoke
 Content-Type: application/json
 
 {"id":1, "status": 1}
 
-###
-
+### HTTP协议访问Gateway，Gateway以Http协议访问order-service，order-service以rpc协议访问product-service
 DELETE http://localhost:8082/orders/1
 
-###
+#############################################################
 
+### HTTP协议访问Gateway2，Gateway以rpc协议访问order-service，order-service以rpc协议访问product-service
+GET http://localhost:8083/dsc/order-service/orders
 
-GET http://localhost:8082/products
-
-###
-
-POST http://localhost:8082/products
+### HTTP协议访问Gateway2，Gateway以rpc协议访问order-service，order-service以rpc协议访问product-service
+POST http://localhost:8083/dsc/order-service/orders
 Content-Type: application/json
 
-{"name":"product name", "price": 10000, "stock": 20}
+{"name":"order name", "price": 10000, "stock": 20}
 
-###
-
-PUT http://localhost:8082/products/1?op=update
+### HTTP协议访问Gateway2，Gateway以rpc协议访问order-service，order-service以rpc协议访问product-service
+PUT http://localhost:8083/dsc/order-service/orders/1?op=update
 Content-Type: application/json
 
 {"id":1, "name":"product name", "price": 10000, "stock": 20}
 
-###
-
-PUT http://localhost:8082/products/1?op=revoke
+### HTTP协议访问Gateway2，Gateway以rpc协议访问order-service，order-service以rpc协议访问product-service(目前这种转发会遇到问题，dubbo会定位到op=update方法上面)
+PUT http://localhost:8083/dsc/order-service/orders/1?op=revoke
 Content-Type: application/json
 
 {"id":1, "status": 1}
 
-###
-
-DELETE http://localhost:8082/products/1
+### HTTP协议访问Gateway2，Gateway以rpc协议访问order-service，order-service以rpc协议访问product-service
+DELETE http://localhost:8083/dsc/order-service/orders/1
 
 ###
